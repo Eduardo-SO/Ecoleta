@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev:server": "ts-node src/server.ts"
+    "dev:server": "ts-node src/server.ts",
+    "knex:migrate": "knex migrate:latest --knexfile knexfile.ts"
   },
   "license": "MIT",
   "dependencies": {
