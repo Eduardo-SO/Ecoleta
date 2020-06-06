@@ -1,10 +1,9 @@
 import React from 'react';
-
-import logo from '../../assets/logo.svg'
+import { Link } from 'react-router-dom';
 import { FiSearch } from 'react-icons/fi'
 
+import logo from '../../assets/logo.svg'
 import './styles.css';
-// import { Container } from './styles';
 
 const Home: React.FC = () => {
   return <div id="page-home">
@@ -16,13 +15,13 @@ const Home: React.FC = () => {
       <main>
         <h1>Seu marketplace de coleta de resíduos.</h1>
         <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-        <a href="./pages">
+        <Link to="/create-point">
           <span>
             <FiSearch />
           </span>
 
           <strong>Pesquisar pontos de coleta</strong>
-        </a>
+        </Link>
       </main>
     </div>
   </div>;
