@@ -99,7 +99,7 @@ const handleSelectItem = useCallback((id: number) => {
     const filteredItems = selectedItems.filter(item => item !== id);
     return setSelectedItems(filteredItems);
   }
-  
+
   setSelectedItems([...selectedItems, id]);
 }, [selectedItems]);
 
@@ -135,7 +135,7 @@ return (
 
           <div className="field-group">
             <div className="field">
-              <label htmlFor="name">E-mail</label>
+              <label htmlFor="email">E-mail</label>
               <input 
                 type="email"
                 name="email"
@@ -145,7 +145,7 @@ return (
             </div>
 
             <div className="field">
-              <label htmlFor="name">Whatsapp</label>
+              <label htmlFor="whatsapp">Whatsapp</label>
               <input 
                 type="text"
                 name="whatsapp"
