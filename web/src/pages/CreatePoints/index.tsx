@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, ChangeEvent, FormEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { LeafletMouseEvent } from 'leaflet';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import { FiArrowLeft } from 'react-icons/fi'
@@ -25,6 +25,8 @@ interface IBGECityResponse {
 }
 
 const CreatePoints: React.FC = () => {
+  const history = useHistory();
+
   const [items, setItems] = useState<Item[]>([]);
   const [ufs, setUfs] = useState<string[]>([]);
   const [cities, setCities] = useState<string[]>([]);
@@ -126,7 +128,9 @@ const handleSubmit = useCallback(async (event: FormEvent) => {
   await api.post('points', data);
 
   alert('Ponto de coleta criado!');
-}, [formData, selectedCity, selectedItems, selectedPosition, selectedUf]);
+
+  history.push('/');
+}, [formData, history, selectedCity, selectedItems, selectedPosition, selectedUf]);
 
 return (
   <div id="page-create-point">
