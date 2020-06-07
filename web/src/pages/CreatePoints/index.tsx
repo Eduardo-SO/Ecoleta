@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, ChangeEvent } from 'react';
+import React, { useEffect, useState, useCallback, ChangeEvent, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { LeafletMouseEvent } from 'leaflet';
 import { Map, TileLayer, Marker } from 'react-leaflet';
@@ -103,6 +103,31 @@ const handleSelectItem = useCallback((id: number) => {
   setSelectedItems([...selectedItems, id]);
 }, [selectedItems]);
 
+const handleSubmit = useCallback(async (event: FormEvent) => {
+  event.preventDefault();
+
+  const { name, email, whatsapp } = formData;
+  const uf = selectedUf;
+  const city = selectedCity;
+  const [latitude, longitude] = selectedPosition;
+  const items = selectedItems;
+
+  const data = {
+    name,
+    email,
+    whatsapp,
+    uf,
+    city,
+    latitude,
+    longitude,
+    items
+  }
+
+  await api.post('points', data);
+
+  alert('Ponto de coleta criado!');
+}, [formData, selectedCity, selectedItems, selectedPosition, selectedUf]);
+
 return (
   <div id="page-create-point">
     <div className="content">
@@ -115,7 +140,7 @@ return (
         </Link>
       </header>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <h1>Cadastro do <br /> ponto de coleta</h1>
 
         <fieldset>
