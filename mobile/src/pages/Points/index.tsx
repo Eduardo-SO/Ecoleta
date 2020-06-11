@@ -1,11 +1,12 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, ScrollView, Image } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
-import { SvgUri } from 'react-native-svg';
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView, Image, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Feather as Icon } from '@expo/vector-icons';
 import Constants from 'expo-constants';
-import { useNavigation } from '@react-navigation/native';
+import { SvgUri } from 'react-native-svg';
+import MapView, { Marker } from 'react-native-maps';
+import * as Location from 'expo-location';
 
 import api from '../../services/api';
 
@@ -18,13 +19,34 @@ interface Item {
 const Points: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
-  const navigation = useNavigation();
 
+  const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0]);
+
+  const navigation = useNavigation();
   useEffect(() => {
     api.get('items').then(response => {
       setItems(response.data);
     })
     
+  }, [])
+
+  useEffect(() => {
+    async function loadPosition() {
+      const {status} = await Location.requestPermissionsAsync();
+
+      if(status !== 'granted') {
+        Alert.alert('Ooops...', 'Precisamos de sua permissão para obter a localização');
+        return;
+      }
+
+      const location = await Location.getCurrentPositionAsync();
+
+      const { latitude, longitude } = location.coords;
+
+      setInitialPosition([latitude, longitude]);
+    };
+
+    loadPosition();
   }, [])
 
   const handleSelectItem = useCallback((id: number) => {
@@ -57,11 +79,13 @@ const Points: React.FC = () => {
         <Text style={styles.description}>Encontre no mapa um ponto de coleta.</Text>
 
         <View style={styles.mapContainer}>
-          <MapView 
-            style={styles.map} 
+          {initialPosition[0] !== 0 && (
+            <MapView 
+            style={styles.map}
+            loadingEnabled={initialPosition[0] === 0}
             initialRegion={{
-              latitude: -23.4553304,
-              longitude: -46.4489193,
+              latitude: initialPosition[0],
+              longitude: initialPosition[1],
               latitudeDelta: 0.014,
               longitudeDelta: 0.014,
             }} 
@@ -70,8 +94,8 @@ const Points: React.FC = () => {
               style={styles.mapMarker}
               onPress={handleNavigateToDetail}
               coordinate={{
-                latitude: -23.4553304,
-                longitude: -46.4489193,
+                latitude: initialPosition[0],
+                longitude: initialPosition[1],
               }}
             >
               <View style={styles.mapMarkerContainer}>
@@ -80,6 +104,7 @@ const Points: React.FC = () => {
               </View>
             </Marker>
           </MapView>
+          )}
         </View>
       </View>
       <View style={styles.itemsContainer}>
