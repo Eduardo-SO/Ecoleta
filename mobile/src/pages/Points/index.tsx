@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, ScrollView, Image, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 import { Feather as Icon } from '@expo/vector-icons';
 import Constants from 'expo-constants';
@@ -23,6 +23,11 @@ interface Point {
   latitude: number;
   longitude: number;
 }
+
+interface Params {
+  uf: string;
+  city: string;
+}
  
 const Points: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
@@ -32,6 +37,10 @@ const Points: React.FC = () => {
   const [points, setPoints] = useState<Point[]>([]);
 
   const navigation = useNavigation();
+  const route = useRoute();
+
+  const routeParams = route.params as Params;
+
   useEffect(() => {
     api.get('items').then(response => {
       setItems(response.data);
@@ -61,15 +70,14 @@ const Points: React.FC = () => {
   useEffect(() => {
     api.get('points', {
       params: {
-        city: 'São Paulo',
-        uf: 'SP',
-        items: 21
+        city: routeParams.city,
+        uf: routeParams.uf,
+        items: selectedItems
       }
     }).then(reponse => {
-      console.log(reponse.data);
       setPoints(reponse.data);
     })
-  }, [])
+  }, [selectedItems])
 
   const handleSelectItem = useCallback((id: number) => {
     const alreadySelected = selectedItems.findIndex(item => item === id);
