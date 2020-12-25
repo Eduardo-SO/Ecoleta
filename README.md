@@ -3,41 +3,40 @@
 </div>
 
 <br />
-<br />
 
 # 📚 Table of contents
-- [🎨 Layout](#🎨-layout)
-- [💡 About the project](#💡-about-the-project)
-- [⚙ Features](#⚙-features)
-- [🛠 Technologies used](#🛠-technologies-used)
-  - [Web](#-web)
-  - [Mobile](#-mobile)
-  - [Server](#-server)
-- [🚀 Running the application](#🚀-running-the-application)
-  - [Pre-requisites](#-pre-requisites)
-  - [Downloading](#-downloading)
-  - [Adjustments](#-adjustments)
-  - [Running the server](#-running-the-server)
-  - [Running the front-end (Web)](#-running-the-front-end-(web))
-  - [Running the front-end (Mobile)](#-running-the-front-end-(mobile))
-- [👨‍💻 Author](#👨‍💻-author)
-- [📜 License](#📜-License)
+- <a href="#-layout">Layout</a>
+- <a href="#--about-the-project">About the project</a>
+- <a href="#-features">Features</a>
+- <a href="#-technologies-used">Technologies used</a>
+  - <a href="#-web">Web</a>
+  - <a href="#-mobile">Mobile</a>
+  - <a href="#-server">Server</a>
+- <a href="#-running-the-application">Running the application</a>
+  - <a href="#-pre-requisites">Pre-requisites</a>
+  - <a href="#-downloading">Downloading</a>
+  - <a href="#-adjustments">Adjustments</a>
+  - <a href="#-running-the-server">Running the server</a>
+  - <a href="#-running-the-front-end-(web)">Running the front-end (Web)</a>
+  - <a href="#-running-the-front-end-(mobile)">Running the front-end (Mobile)</a>
+- <a href="#-author">Author</a>
+- <a href="#-license">License</a>
 
 # 🎨 Layout
-<h2>Web</h2> 
 <div align="center">
+  <h2>Web</h2> 
   <img src=".github/ecoleta.gif" />
 </div>
 
-<h2>Mobile</h2> 
 <div align="center">
+  <h2>Mobile</h2> 
   <img src=".github/eco-mobile1.jpg" width="300px" />
   <img src=".github/eco-mobile2.jpg" width="300px" />
 </div>
 
 
 # 💡 About the project
-**Ecoleta** is an application that connects companies that collect organic or inorganic waste to people who need to dispose of this waste.
+**Ecoleta** is an application that connects companies or entities that collect organic or inorganic waste to people who need to dispose of this waste.
 
 This is a project developed during the first **[Next Level Week](https://nextlevelweek.com/)**, carried out by **[Rocketseat](https://rocketseat.com.br/)**.
 
@@ -50,7 +49,7 @@ Companies or entities can register on the web platform by sending:
 
 - An image of the collection point
 - Name of the entity, email and whatsapp
-- And the address so that it can appear on the map
+- Address, so that it can appear on the map
 - In addition to selecting one or more collection items:
   - Lamps
   - Batteries
@@ -81,8 +80,15 @@ This project was developed using the following technologies:
 
 ## Mobile
 - TypeScript
-- Expo
 - Axios
+- Expo
+- Expo Mail Composer
+- Expo Google Fonts
+- Expo Constants
+- Expo Location
+- React Native Maps
+- React Navigation
+- React Native SVG
 
 ## Server
 - TypeScript
@@ -90,7 +96,10 @@ This project was developed using the following technologies:
 - Express
 - Knex
 - Celebrate
+- Joi
 - Multer
+- CORS
+- ts-node
 - SQLite3
 
 <div align="right">
@@ -276,6 +285,9 @@ Made with 💜 by [Eduardo Souza de Oliveira](https://github.com/Eduardo-SO)
 [![Linkedin Badge](https://img.shields.io/badge/-Eduardo%20Souza%20de%20Oliveira-0a66c2?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/eduardo-s-242652103/)](https://www.linkedin.com/in/eduardo-s-242652103/) 
 [![Gmail Badge](https://img.shields.io/badge/-eduardo.sool07@gmail.com-ea4335?style=flat-square&logo=Gmail&logoColor=white&link=mailto:eduardo.sool07@gmail.com)](mailto:eduardo.sool07@gmail.com)
 
+<div align="right">
+  <a href="#📚-table-of-contents">Back to top</a>
+</div>
 
 # 📜 License
 
