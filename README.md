@@ -9,8 +9,8 @@
 - <a href="#-about-the-project">About the project</a>
 - <a href="#-features">Features</a>
 - <a href="#-technologies-used">Technologies used</a>
-  - <a href="#web">Web</a>
-  - <a href="#mobile">Mobile</a>
+  - <a href="#web-1">Web</a>
+  - <a href="#mobile-1">Mobile</a>
   - <a href="#server">Server</a>
 - <a href="#-running-the-application">Running the application</a>
   - <a href="#pre-requisites">Pre-requisites</a>
