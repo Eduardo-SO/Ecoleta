@@ -247,7 +247,7 @@ return (
                 onClick={() => handleSelectItem(item.id)}
                 className={selectedItems.includes(item.id) ? 'selected' : ''}
               >
-                <img src={item.image_url} alt="Lampadas"/>
+                <img src={item.image_url} alt={item.title}/>
                 <span>{item.title}</span>
               </li>
             ))}
