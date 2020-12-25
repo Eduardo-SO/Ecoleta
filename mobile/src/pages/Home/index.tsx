@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Feather as Icon } from '@expo/vector-icons'
 import { StyleSheet, View, Text, Image, ImageBackground, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       uf,
       city
     });
-  }, [])
+  }, [uf, city])
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
