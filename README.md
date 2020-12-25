@@ -6,19 +6,19 @@
 
 # 📚 Table of contents
 - <a href="#-layout">Layout</a>
-- <a href="#--about-the-project">About the project</a>
+- <a href="#-about-the-project">About the project</a>
 - <a href="#-features">Features</a>
 - <a href="#-technologies-used">Technologies used</a>
-  - <a href="#-web">Web</a>
-  - <a href="#-mobile">Mobile</a>
-  - <a href="#-server">Server</a>
+  - <a href="#web">Web</a>
+  - <a href="#mobile">Mobile</a>
+  - <a href="#server">Server</a>
 - <a href="#-running-the-application">Running the application</a>
-  - <a href="#-pre-requisites">Pre-requisites</a>
-  - <a href="#-downloading">Downloading</a>
-  - <a href="#-adjustments">Adjustments</a>
-  - <a href="#-running-the-server">Running the server</a>
-  - <a href="#-running-the-front-end-(web)">Running the front-end (Web)</a>
-  - <a href="#-running-the-front-end-(mobile)">Running the front-end (Mobile)</a>
+  - <a href="#pre-requisites">Pre-requisites</a>
+  - <a href="#downloading">Downloading</a>
+  - <a href="#adjustments">Adjustments</a>
+  - <a href="#running-the-server">Running the server</a>
+  - <a href="#running-the-front-end-(web)">Running the front-end (Web)</a>
+  - <a href="#running-the-front-end-(mobile)">Running the front-end (Mobile)</a>
 - <a href="#-author">Author</a>
 - <a href="#-license">License</a>
 
@@ -41,7 +41,7 @@
 This is a project developed during the first **[Next Level Week](https://nextlevelweek.com/)**, carried out by **[Rocketseat](https://rocketseat.com.br/)**.
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 # ⚙ Features
@@ -63,7 +63,7 @@ Users have access to the mobile application, where they can:
 - Contact the entity via E-mail or WhatsApp
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 # 🛠 Technologies used
@@ -103,7 +103,7 @@ This project was developed using the following technologies:
 - SQLite3
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 # 🚀 Running the application
@@ -117,7 +117,7 @@ This project is divided into three parts:
 💡 Both Web and Mobile need the Server to be running to work.
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 ## Pre-requisites
@@ -143,7 +143,7 @@ This project is divided into three parts:
     It can also be used to download the application code on your local machine.
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 ## Downloading
@@ -167,7 +167,7 @@ Once this is done, a folder containing the application code will be downloaded
   ```
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 ## Adjustments
@@ -179,7 +179,7 @@ You can change them at:
 - `mobile\src\services\api.ts`
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 ## Running the server
@@ -219,7 +219,7 @@ With that the server will be started on the port `3333`
 **Open a new terminal** and continue following the steps below
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 ## Running the front-end (Web)
@@ -247,7 +247,7 @@ With that the server will be started in [http://localhost:3000/](http://localhos
 **Open a new terminal** and continue following the steps below
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 ## Running the front-end (Mobile)
@@ -275,7 +275,7 @@ To start the mobile application you will need a phone with the **Expo** applicat
 - Open the expo application on your phone and scan the QR code that will appear
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 # 👨‍💻 Author
@@ -286,7 +286,7 @@ Made with 💜 by [Eduardo Souza de Oliveira](https://github.com/Eduardo-SO)
 [![Gmail Badge](https://img.shields.io/badge/-eduardo.sool07@gmail.com-ea4335?style=flat-square&logo=Gmail&logoColor=white&link=mailto:eduardo.sool07@gmail.com)](mailto:eduardo.sool07@gmail.com)
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
 
 # 📜 License
@@ -294,5 +294,5 @@ Made with 💜 by [Eduardo Souza de Oliveira](https://github.com/Eduardo-SO)
 This project is under the license MIT.
 
 <div align="right">
-  <a href="#📚-table-of-contents">Back to top</a>
+  <a href="#-table-of-contents">Back to top</a>
 </div>
