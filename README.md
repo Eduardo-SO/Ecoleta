@@ -17,8 +17,8 @@
   - <a href="#downloading">Downloading</a>
   - <a href="#adjustments">Adjustments</a>
   - <a href="#running-the-server">Running the server</a>
-  - <a href="#running-the-front-end-(web)">Running the front-end (Web)</a>
-  - <a href="#running-the-front-end-(mobile)">Running the front-end (Mobile)</a>
+  - <a href="#running-the-front-end-web">Running the front-end (Web)</a>
+  - <a href="#running-the-front-end-mobile">Running the front-end (Mobile)</a>
 - <a href="#-author">Author</a>
 - <a href="#-license">License</a>
 
